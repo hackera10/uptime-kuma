@@ -164,7 +164,7 @@ let needSetup = false;
 let indexHTML = "";
 
 try {
-    indexHTML = fs.readFileSync("index.html").toString();
+    indexHTML = fs.readFileSync("./dist/index.html").toString();
 } catch (e) {
     // "dist/index.html" is not necessary for development
     if (process.env.NODE_ENV !== "development") {
