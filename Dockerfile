@@ -4,7 +4,7 @@ WORKDIR /app
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 
 COPY . .
-RUN npm ci --production && \
+RUN npm install && npm run build && \
     chmod +x /app/extra/entrypoint.sh
 
 
